@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Moderno</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="typewriter">Meu Portfólio</h1>
+    <nav>
+      <a href="#sobre">Sobre Mim</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <button id="mode-toggle" title="Alternar tema" aria-label="Alternar tema">💡</button>
+    </nav>
+  </header>
+
+  <div id="ovni" title="👽 Não clique em mim!">
+    <svg width="60" height="60" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="40" rx="24" ry="10" fill="#999" stroke="#333" stroke-width="2" />
+      <circle cx="32" cy="30" r="10" fill="#6cf" stroke="#333" stroke-width="2" />
+      <circle cx="32" cy="30" r="4" fill="#0f0" />
+      <circle cx="30.5" cy="29.5" r="0.8" fill="#000" />
+      <circle cx="33.5" cy="29.5" r="0.8" fill="#000" />
+    </svg>
+  </div>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou um desenvolvedor apaixonado por tecnologia, com experiência em criação de aplicações web modernas. 
+      Tenho formação em Análise e Desenvolvimento de Sistemas e estou sempre em busca de novos desafios que me permitam aprender e crescer. 
+      Gosto de resolver problemas com código limpo, foco em usabilidade e performance. Estou disponível para oportunidades como desenvolvedor front-end, back-end ou full stack.
+    </p>
+  </section>
+
+  <!-- Seção Habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul class="skills">
+      <li>💻 HTML5, CSS3, JavaScript</li>
+      <li>⚙️ Python, Flask, Streamlit</li>
+      <li>🌐 APIs REST, Firebase</li>
+      <li>🛠 Git, GitHub, Figma</li>
+      <li>📊 SQL, Excel Avançado</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do projeto 1.</p>
+      </div>
+      <div class="card">
+        <h3>Projeto 2</h3>
+        <p>Descrição breve do projeto 2.</p>
+      </div>
+      <div class="card">
+        <h3>Projeto 3</h3>
+        <p>Descrição breve do projeto 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form>
+      <input type="text" placeholder="Nome" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 - Desenvolvido por Você
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
