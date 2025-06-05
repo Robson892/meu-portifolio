@@ -4,8 +4,9 @@ toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light");
 
   const isLight = document.body.classList.contains("light");
-  toggleBtn.textContent = isLight ? "💡" : "🌙";
+  toggleBtn.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
 });
+
 
 const cards = document.querySelectorAll('.card');
 
@@ -55,5 +56,7 @@ ovni.addEventListener("mouseenter", () => {
   ovni.style.left = `${x}px`;
   ovni.style.top = `${y}px`;
 });
+
+
 
 

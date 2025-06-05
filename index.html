@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
 <body>
   <header>
@@ -17,7 +19,9 @@
       <a href="#habilidades">Skills</a>
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
-      <button id="mode-toggle" title="Alternar tema" aria-label="Alternar tema">💡</button>
+      <button id="mode-toggle" title="Alternar tema" aria-label="Alternar tema"> <i class="fas fa-moon"></i>
+</button>
+
     </nav>
   </header>
 
@@ -41,18 +45,61 @@
     </p>
   </section>
 
-  <!-- Seção Habilidades -->
+  
+  <!-- Skills -->
   <section id="habilidades">
-    <h2>SKILLS</h2>
-    <ul class="habilidades">
-  <li>💻 HTML5, CSS3, JavaScript, PHP</li>
-  <li>⚙️ Python, Flask, Django, Streamlit</li>
-  <li>🌐 APIs REST, Firebase</li>
-  <li>🛠 GitHub, Figma, PowerBI</li>  
-  <li>📊 MySQL, Oracle</li>
-  </ul>
+  <h2>SKILLS</h2>
+  <div class="habilidades-wrapper">
+    <div class="habilidades-lista">
+      <div class="habilidades-group">
+        <h3>Linguagens</h3>
+        <ul class="habilidades">
+          <li>💻 HTML5</li>
+          <li>💻 CSS3</li>
+          <li>💻 JavaScript</li>
+          <li>💻 PHP</li>
+          <li>⚙️ Python</li>
+        </ul>
+      </div>
+      <div class="habilidades-group">
+        <h3>Frameworks e Bibliotecas</h3>
+        <ul class="habilidades">
+          <li>⚙️ Flask</li>
+          <li>⚙️ Django</li>
+          <li>⚙️ Streamlit</li>
+        </ul>
+      </div>
+      <div class="habilidades-group">
+        <h3>APIs e Serviços</h3>
+        <ul class="habilidades">
+          <li>🌐 APIs REST</li>
+          <li>🌐 Firebase</li>
+        </ul>
+      </div>
+      <div class="habilidades-group">
+        <h3>Bancos de Dados</h3>
+        <ul class="habilidades">
+          <li>📊 MySQL</li>
+          <li>📊 Oracle</li>
+        </ul>
+      </div>
+      <div class="habilidades-group">
+        <h3>Ferramentas</h3>
+        <ul class="habilidades">
+          <li>🛠 GitHub</li>
+          <li>🛠 Figma</li>
+          <li>🛠 PowerBI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="habilidades-imagem">
+     
+      <img id="robo-img" src="https://tse2.mm.bing.net/th/id/OIP.qCEToCInizTQLA0bxa9gxAHaNK?w=1080&h=1920&rs=1&pid=ImgDetMain" alt="Robô" />
 
-  </section>
+    </div>
+  </div>
+</section>
+
 
   <!-- Seção Projetos -->
   <section id="projetos">
@@ -96,5 +143,17 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const robo = document.getElementById('robo-img');
+
+  document.addEventListener('mousemove', (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth - 0.5) * 50; // -15° a 15°
+    const y = (e.clientY / innerHeight - 0.5) * 50;
+
+    robo.style.transform = `rotateY(${x}deg) rotateX(${y * -1}deg) scale(1.03)`;
+  });
+</script>
+
 </body>
 </html>

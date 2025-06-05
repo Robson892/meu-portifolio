@@ -1,3 +1,5 @@
+/* ======= CSS completo com ajustes ======= */
+
 * {
   margin: 0;
   padding: 0;
@@ -91,25 +93,18 @@ h2 {
   color: #ff6600;
 }
 
+#projetos a {
+  color: #21d4fd; /* Cor dos links */
+  text-decoration: none;
+}
+
+#projetos a:hover {
+  color: #b721ff;
+}
+
 /* Cards */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.cards {
-  perspective: 1000px; /* Cria um espaço 3D para os filhos */
-}
-
-.cards {
-  perspective: 1000px;
-  position: relative;
-}
-
-.cards {
-  perspective: 1200px; /* perspectiva para o efeito 3D */
+  perspective: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,7 +130,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Iluminação dinâmica do card */
 .card::before {
   content: '';
   position: absolute;
@@ -156,25 +150,22 @@ h2 {
   opacity: 1;
 }
 
-/* Conteúdo fica acima da iluminação */
 .card > * {
   position: relative;
   z-index: 1;
 }
 
-/* Sombras internas para profundidade */
 .card .shadow-inner {
   position: absolute;
   inset: 0;
   border-radius: 16px;
   box-shadow:
-    inset 5px 5px 10px rgba(0,0,0,0.8),
-    inset -5px -5px 10px rgba(255, 102, 0, 0.15);
+    inset 5px 5px 10px rgba(115, 114, 124, 0.8),
+    inset -5px -5px 10px rgba(180, 169, 162, 0.15);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Brilho (glare) dinâmico */
 .card .glare {
   position: absolute;
   top: 0; left: 0;
@@ -189,7 +180,6 @@ h2 {
   transition: transform 0.1s ease;
 }
 
-/* Hover escala e sombra */
 .card:hover {
   box-shadow:
     0 20px 40px rgba(255, 102, 0, 0.8),
@@ -197,19 +187,31 @@ h2 {
   transform: scale(1.07);
 }
 
-/* Títulos com cor viva */
 .card h3 {
   color: #ff6600;
   margin-bottom: 0.8rem;
 }
 
-
-
 body.light .card {
   background: #ffffff;
   color: #111;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(27, 23, 23, 0.329);
 }
+
+body.light .card:hover {
+  box-shadow:
+    0 20px 40px rgba(48, 47, 45, 0.7),
+    inset 0 0 40px rgba(255, 204, 0, 0.4);
+  transform: scale(1.07);
+}
+
+body.light .card::before {
+  background: radial-gradient(circle at center, rgba(255, 204, 0, 0.35), transparent 70%);
+}
+
+
+
+
 
 /* Formulário */
 form {
@@ -285,8 +287,17 @@ body.light footer {
   nav {
     flex-direction: column;
   }
-}
 
+  #habilidades {
+    text-align: center;
+  }
+  .habilidades-group {
+    text-align: center;
+  }
+  .habilidades-group ul li {
+    justify-content: center;
+  }
+}
 
 #fugir {
   position: fixed;
@@ -298,7 +309,7 @@ body.light footer {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: top 0.3s ease, left 0.3s ease;
-  pointer-events: none; /* para não atrapalhar clique */
+  pointer-events: none;
   z-index: 1000;
   box-shadow: 0 0 15px #ff6600aa;
   cursor: pointer;
@@ -316,14 +327,13 @@ body.light footer {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 13ch } /* ajuste conforme o número de letras */
+  to { width: 13ch }
 }
 
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: #ff6600; }
 }
-
 
 #ovni {
   position: fixed;
@@ -345,6 +355,51 @@ body.light footer {
     transform: translateY(-6px);
   }
 }
+
+/* ======= Ajustes para a seção habilidades ======= */
+
+#habilidades {
+  max-width: 900px;
+  width: 90%;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.habilidades-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.habilidades-lista {
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+
+.habilidades-imagem {
+  flex: 1 1 35%;
+  text-align: center;
+  min-height: 450px; /* Aumenta a altura mínima do container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.habilidades-imagem img {
+  position: relative;
+  max-width: 120%;
+  max-height: 120%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #21d5fd69;
+  object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+
+/* Formatação Skills */
 .habilidades li {
   list-style: none;
   padding: 8px 0;
@@ -353,7 +408,6 @@ body.light footer {
   align-items: center;
   gap: 10px;
   transition: transform 0.2s ease;
- 
 }
 
 .habilidades li:hover {
@@ -361,4 +415,30 @@ body.light footer {
   color: #00ff99;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .habilidades-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .habilidades-lista,
+  .habilidades-imagem {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
 
+
+
+/* Para responsividade */
+@media (max-width: 600px) {
+  #habilidades {
+    text-align: center;
+  }
+  .habilidades-group {
+    text-align: center;
+  }
+  .habilidades-group ul li {
+    justify-content: center;
+  }
+}
