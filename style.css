@@ -345,3 +345,20 @@ body.light footer {
     transform: translateY(-6px);
   }
 }
+.habilidades li {
+  list-style: none;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+ 
+}
+
+.habilidades li:hover {
+  transform: scale(1.05);
+  color: #00ff99;
+}
+
+

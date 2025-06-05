@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio Moderno</title>
+  <title>Meu Portfólio</title>
+  <meta name="description" content="Portfólio de desenvolvedor web com projetos em HTML, CSS, JavaScript, Python e mais.">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <h1 class="typewriter">Meu Portfólio</h1>
     <nav>
       <a href="#sobre">Sobre Mim</a>
-      <a href="#habilidades">Habilidades</a>
+      <a href="#habilidades">Skills</a>
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
       <button id="mode-toggle" title="Alternar tema" aria-label="Alternar tema">💡</button>
@@ -42,22 +43,25 @@
 
   <!-- Seção Habilidades -->
   <section id="habilidades">
-    <h2>Habilidades</h2>
-    <ul class="skills">
-      <li>💻 HTML5, CSS3, JavaScript</li>
-      <li>⚙️ Python, Flask, Streamlit</li>
-      <li>🌐 APIs REST, Firebase</li>
-      <li>🛠 Git, GitHub, Figma</li>
-      <li>📊 SQL, Excel Avançado</li>
-    </ul>
+    <h2>SKILLS</h2>
+    <ul class="habilidades">
+  <li>💻 HTML5, CSS3, JavaScript, PHP</li>
+  <li>⚙️ Python, Flask, Django, Streamlit</li>
+  <li>🌐 APIs REST, Firebase</li>
+  <li>🛠 GitHub, Figma, PowerBI</li>  
+  <li>📊 MySQL, Oracle</li>
+  </ul>
+
   </section>
 
+  <!-- Seção Projetos -->
   <section id="projetos">
     <h2>Projetos</h2>
     <div class="cards">
       <div class="card">
-        <h3>Projeto 1</h3>
-        <p>Descrição breve do projeto 1.</p>
+        <h3>Landing Page - Academia</h3>
+        <p>Site responsivo para uma academia, com apresentação de planos, formulário de contato e integração com WhatsApp para matrículas rápidas.</p>
+        <a href="https://robson892.github.io/landingpage-academia/" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
       </div>
       <div class="card">
         <h3>Projeto 2</h3>
@@ -70,12 +74,19 @@
     </div>
   </section>
 
+  <!-- Seção Contato -->
   <section id="contato">
     <h2>Contato</h2>
     <form>
-      <input type="text" placeholder="Nome" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" placeholder="Seu nome" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Seu email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+
       <button type="submit">Enviar</button>
     </form>
   </section>
