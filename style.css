@@ -417,18 +417,13 @@ body.light footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .habilidades-wrapper {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+  
   .habilidades-lista,
   .habilidades-imagem {
     flex: 1 1 100%;
     text-align: center;
   }
 }
-
-
 
 /* Para responsividade */
 @media (max-width: 600px) {
