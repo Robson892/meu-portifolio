@@ -371,10 +371,13 @@ body.light footer {
 }
 
 #habilidades h3 {
+ margin-bottom: 20px;
+ margin-top: 20px;
  color:rgb(71, 154, 173);
 }
 
 .habilidades-wrapper {
+  
   display: flex;
   gap: 2rem;
   align-items: flex-start;
