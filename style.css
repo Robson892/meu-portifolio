@@ -335,8 +335,11 @@ body.light footer {
   50% { border-color: #ff6600; }
 }
 
+
 #ovni {
-  position: fixed;
+  pointer-events: auto; /* Garante que ele receba eventos do mouse */
+  cursor: pointer; /* Ajuda o usuário a perceber que é clicável */
+  position: absolute;
   bottom: 80px;
   left: 80px;
   width: 60px;
@@ -346,6 +349,8 @@ body.light footer {
   transition: left 0.3s ease, top 0.3s ease;
   animation: flutuar 2s ease-in-out infinite;
 }
+
+
 
 @keyframes flutuar {
   0%, 100% {
@@ -363,6 +368,10 @@ body.light footer {
   width: 90%;
   padding: 2rem 0;
   text-align: left;
+}
+
+#habilidades h3 {
+ color:rgb(71, 154, 173);
 }
 
 .habilidades-wrapper {
@@ -404,8 +413,8 @@ body.light footer {
   list-style: none;
   padding: 8px 0;
   font-size: 1.1rem;
-  display: flex;
-  align-items: center;
+  display:inline-flex;
+  align-items: left;
   gap: 10px;
   transition: transform 0.2s ease;
 }
@@ -433,7 +442,31 @@ body.light footer {
   .habilidades-group {
     text-align: center;
   }
-  .habilidades-group ul li {
+  .habilidades-group ul li{
     justify-content: center;
+  }
+  
+}
+
+/* Compatibilidade com navegadores */
+.card {
+  background: -moz-linear-gradient(145deg, #2b2b2b, #1e1e1e);
+  background: -webkit-linear-gradient(145deg, #2b2b2b, #1e1e1e);
+  background: linear-gradient(145deg, #2b2b2b, #1e1e1e);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.habilidades-imagem img {
+  object-fit: contain;
+  font-family: 'object-fit: contain;';
+}
+
+@supports (mix-blend-mode: screen) {
+  .card::before {
+    mix-blend-mode: screen;
   }
 }
